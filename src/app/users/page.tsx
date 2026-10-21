@@ -1,5 +1,3 @@
-import { promises } from "dns";
-
 type User={
     id:number;
     name:string;

@@ -10,7 +10,7 @@ const ProductPage = async() => {
     ther response is called after no-catch even if it is by default it will hasnt cach
     but while u r call at top (export const fetchCache="default-cache") it works based on the header (i.e no-store or default)
     */
-    const reponse1=await fetch("http://localhost:3001/users");/*by default there catch */
+    await fetch("http://localhost:3001/users");/*by default there catch */
     const reponse=await fetch("http://localhost:3001/users",{next:{
         revalidate:10
     }});/*no catch */
