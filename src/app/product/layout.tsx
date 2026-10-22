@@ -5,8 +5,10 @@ type Product={
     phone:string;
     email:string;
 }
-const Layout =async() => {await fetch("http://localhost:3001/users");/*by default there catch */
-    const reponse=await fetch("http://localhost:3001/users",{cache:"no-store"});/*no catch */
+const Layout =async() => {
+    const reponse=await fetch("http://localhost:3001/users", {
+        cache: "force-cache",
+    });
     const product= await reponse.json();
     console.log('first')
     console.log(product)
