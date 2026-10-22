@@ -26,6 +26,7 @@ jobs:
       - name: Lint
         run: npm run lint
 
+
       - name: Start mock API
         run: |
           node server.js > /tmp/json-server.log 2>&1 &
