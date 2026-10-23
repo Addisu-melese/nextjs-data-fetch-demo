@@ -6,21 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "json-server": "^0.17.4",
-    "next": "^15.5.28",
+    "next": "^16.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "^15.5.28",
+    "eslint-config-next": "^16.4.2",
     "postcss": "^8",
     "tailwindcss": "^4.3.3",
     "typescript": "^5"
