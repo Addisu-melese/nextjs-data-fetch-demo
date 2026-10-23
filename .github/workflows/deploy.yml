@@ -41,10 +41,12 @@ jobs:
       - name: Start mock API
         run: |
           node server.js > /tmp/json-server.log 2>&1 &
-          for attempt in {1..30}; do
+          attempt=0
+          while [ "$attempt" -lt 30 ]; do
             if curl --fail --silent http://localhost:3001/users > /dev/null; then
               exit 0
             fi
+            attempt=$((attempt + 1))
             sleep 1
           done
           cat /tmp/json-server.log
